@@ -1,8 +1,11 @@
-<%= link_to "PetApplication", '#', id: "logo" %>
-<nav>
-  <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to "Main page", @index_path %></li>
-    <li><%= link_to "About me", about_path %></li>
+<div id="navigation">
+  <%= image_tag("logo.gif", size: "50x50",alt: "Edit Entry") %>
+  <nav>
+  <ul class="nav navbar-nav navbar">
+    <li><%= link_to "Main page", pages_path %></li>
+    <li><%= link_to "About me", controller: "pages", action: "about" %></li>
     <li><%= link_to "Log in", '#' %></li>
   </ul>
-</nav>
+  </nav>
+</div>
+<div id="fixfloat"></div>

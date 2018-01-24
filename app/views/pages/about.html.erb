@@ -1,1 +1,12 @@
-about will be here
+
+
+<p> Ilya Pavlovsky - Ruby on Rails junior developer</p>
+<p> Birth Date: 03.24.1983 </p>
+<% @time_now = Time.now %>
+<% @birth_date = Time.parse("Mar 24 1984 8 00 00") %>
+
+<p>My birth date is <%= @birth_date.to_formatted_s(:long_ordinal)  %> </p>
+<p>Current time is <%= @time_now.to_formatted_s(:long_ordinal) %></p>
+<p>My age is <%= @time_now.year - @birth_date.year - 1 %></p>
+
+<% @age = Time.current.year - Time.parse("Mar 24 1984 8 00").year %>
