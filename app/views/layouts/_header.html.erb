@@ -1,10 +1,18 @@
 <div id="navigation">
   <%= image_tag("logo.gif", size: "50x50",alt: "Edit Entry") %>
+  <%= ("Welcome "+ current_user.email) if user_signed_in? %>
   <nav>
   <ul class="nav navbar-nav navbar">
     <li><%= link_to "Main page", pages_path %></li>
-    <li><%= link_to "About me", controller: "pages", action: "about" %></li>
-    <li><%= link_to "Log in", '#' %></li>
+    <li><%= link_to "About me", about_pages_path %></li>
+    <% unless user_signed_in? %>
+    <li><%= link_to "Sign Up", new_user_registration_path %></li>
+    <li><%= link_to "Sign In", new_user_session_path %></li>
+    <% else %>
+    <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+    <% end %>
+
+
   </ul>
   </nav>
 </div>

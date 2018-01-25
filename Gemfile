@@ -8,6 +8,7 @@ end
 # Custum rubygems
 
 gem 'bootstrap-sass', '~> 3.3.7'
+gem 'devise'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -43,6 +44,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails', '~> 3.7'
 end
 
 group :development do
