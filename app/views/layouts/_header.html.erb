@@ -1,19 +1,22 @@
-<div id="navigation">
-  <%= image_tag("logo.gif", size: "50x50",alt: "Edit Entry") %>
-  <%= ("Welcome "+ current_user.email) if user_signed_in? %>
-  <nav>
-  <ul class="nav navbar-nav navbar">
-    <li><%= link_to "Main page", pages_path %></li>
-    <li><%= link_to "About me", about_pages_path %></li>
-    <% unless user_signed_in? %>
-    <li><%= link_to "Sign Up", new_user_registration_path %></li>
-    <li><%= link_to "Sign In", new_user_session_path %></li>
-    <% else %>
-    <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-    <% end %>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <%= link_to image_tag("logo.gif", size: "90x90",alt: "Edit Entry", class: "navbar-brand"), pages_path %>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "Main page", pages_path %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "About me", about_pages_path %>
+        </li>
+        <% unless user_signed_in? %>
+        <li class="nav-item"><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li class="nav-item"><%= link_to "Sign In", new_user_session_path %></li>
+        <% else %>
+        <li class="nav-item"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <% end %>
+      </ul>
+      <p id='user-greeting'><%= ("Welcome "+ current_user.email) if user_signed_in? %></p>
 
-
-  </ul>
   </nav>
-</div>
+
+
 <div id="fixfloat"></div>

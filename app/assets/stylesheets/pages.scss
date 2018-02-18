@@ -1,12 +1,11 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 body {
   background-color: #ddd;
   color: #333;
-  margin: 5px;
+
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -14,4 +13,34 @@ body {
 
 #fixfloat {
   clear: both;
+}
+
+.navbar {
+  margin: 0;
+
+  .navbar-brand {
+    height: 80px;
+    padding: 5px;
+    margin: 0;
+  }
+  .nav-item {
+    margin: 10px 20px;
+    color: white;
+    a {
+      color: white;
+
+      &:visited {
+        color: white;
+      }
+
+      &:hover {
+        color: #fff;
+        background-color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+  #user-greeting {
+    color: white;
+  }
 }
