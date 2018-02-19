@@ -11,6 +11,13 @@ body {
   line-height: 18px;
 }
 
+.center {
+    width: 270px; /* Ширина элемента в пикселах */
+    // padding: 10px; /* Поля вокруг текста */
+    margin: auto; /* Выравниваем по центру */
+    background: #fff; /* Цвет фона */
+}
+
 .p-0 {
   padding: 0;
 }
