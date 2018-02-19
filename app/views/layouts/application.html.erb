@@ -9,14 +9,9 @@
 
   <body>
     <%= render 'layouts/header' %>
+    <%= render 'layouts/alert' %>
 
-    <% if notice %>
-      <p class="notice"><%= notice %> </p>
-    <% end %>
-    <% if alert %>
-    <p class="alert"><%= alert %> </p>
-    <% end %>
-    <%= render 'layouts/slider' %>
+    
     <div id="<%= controller.controller_name %>">
     <%= yield %>
     </div>
